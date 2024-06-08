@@ -1,0 +1,9 @@
+change node_modules/@react-navigation/native/package.json main/module field to "src/index.tsx"
+change node_modules/@react-navigation/core/package.json main/module field to "src/index.tsx"
+change node_modules/@react-navigation/core/src/useIsFocused.tsx field
+add line:
+```
+  console.log(`==== in useIsFocused body [${isFocused !== valueToReturn}]`, isFocused, valueToReturn);
+
+```
+

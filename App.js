@@ -2,11 +2,11 @@ import * as React from 'react';
 import { Button, View, Text } from 'react-native';
 import { NavigationContainer, useIsFocused } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import {useIsFocused} from '@react-navigation/core';
 
 function HomeScreen({ navigation }) {
   const isFocused = useIsFocused();
 
+  console.log('==== render HomeScreen, isFocused', isFocused);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>home isFocused: {isFocused ? 'true' : 'false'}</Text>
@@ -21,6 +21,7 @@ function HomeScreen({ navigation }) {
 
 function DetailsScreen() {
   const isFocused = useIsFocused();
+  console.log('==== render DetailsScreen, isFocused', isFocused);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>detail isFocused: {isFocused ? 'true' : 'false'}</Text>
